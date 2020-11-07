@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("================================");
+            for(int i=0;i<3;i++){
+                String s1=sc.next();
+                int x=sc.nextInt();
+                int temp=x;int count=0;
+                int len=s1.length();
+                while(temp!=0)
+                {
+                    count++;
+                    temp/=10;
+                }
+                if(x==0)
+                {
+                    count=1;
+                }
+              //  System.out.println(count);
+                System.out.print(s1);
+                for(int space=0;space<15-len;space++)
+                {
+                    System.out.print(" ");
+                }
+                for(int j=0;j<(3-count);j++)
+                {
+                    System.out.print("0");
+                }
+                System.out.println(x);
+                //Complete this line
+            }
+            System.out.println("================================");
+    }
+}
+
+
+
